@@ -1,17 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
-import {
-    Formik,
-    FormikHelpers,
-    FormikProps,
-    Form,
-    Field,
-    FieldProps,
-} from "formik";
+import { Formik, Form } from "formik";
 import clsx from "clsx";
 import { User } from "@interfaces/data/user";
 import { UseFormField } from "./UseFormField";
 import { ActionType } from "@enums/enums";
 import useUserStore from "@zustand/users/userStore";
+import { userValidationSchema } from "@validationSchemas/user";
 
 interface Props {
     user: User;
@@ -50,6 +44,7 @@ export const UserForm = ({ user, type }: Props) => {
     return (
         <Formik
             initialValues={user ? user : INITIAL_VALUES}
+            validationSchema={userValidationSchema}
             onSubmit={async (values, actions) => {
                 if (type === ActionType.Edit) {
                     await updateUser(user.id, values);
@@ -61,15 +56,7 @@ export const UserForm = ({ user, type }: Props) => {
                 redirect();
             }}
         >
-            {({
-                values,
-                errors,
-                touched,
-                handleChange,
-                handleBlur,
-                handleSubmit,
-                isSubmitting,
-            }) => (
+            {({ errors, isSubmitting }) => (
                 <Form className="w-full">
                     {isSubmitting ? (
                         <span className="text-center p-4 bg-black text-white block mb-4 rounded-sm shadow-sm text-[0.8rem]">
@@ -95,6 +82,10 @@ export const UserForm = ({ user, type }: Props) => {
                     <ul className="flex items-center space-x-3">
                         <li>
                             <button
+                                disabled={
+                                    isSubmitting ||
+                                    Object.keys(errors).length > 0
+                                }
                                 className={`${buttonStyles} px-4 py-4 uppercase text-white rounded-sm shadow-sm transition-colors text-[0.8rem]`}
                                 type="submit"
                             >
@@ -103,6 +94,7 @@ export const UserForm = ({ user, type }: Props) => {
                         </li>
                         <li>
                             <Link
+                                aria-disabled={isSubmitting}
                                 to="/"
                                 className="bg-red-400 hover:bg-red-500 px-4 py-4 uppercase text-white rounded-sm shadow-sm transition-colors block text-[0.8rem]"
                             >

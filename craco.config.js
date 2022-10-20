@@ -6,6 +6,10 @@ module.exports = {
         alias: {
             "@components": path.resolve(__dirname, "src/components"),
             "@interfaces": path.resolve(__dirname, "src/interfaces"),
+            "@validationSchemas": path.resolve(
+                __dirname,
+                "src/validationSchemas"
+            ),
             "@enums": path.resolve(__dirname, "src/enums"),
             "@routes": path.resolve(__dirname, "src/routes"),
             "@views": path.resolve(__dirname, "src/views"),

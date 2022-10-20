@@ -21,14 +21,19 @@ const useUserStore = create<UserStore>((set) => ({
     createUser: async (payload) => {
         const { data: user } = await axios.post(api_uri, {
             ...payload,
-            avatar: `https://api.multiavatar.com/${payload.first_name}.png`,
+            avatar: `https://api.multiavatar.com/${payload.first_name.toLowerCase()}.png`,
         });
 
         set({ user });
         return user;
     },
     updateUser: async (id, payload) => {
-        const { data: user } = await axios.put(`${api_uri}/${id}`, payload);
+        const { data: user } = await axios.put(`${api_uri}/${id}`, {
+            ...payload,
+            avatar: payload.avatar
+                ? payload.avatar
+                : `https://api.multiavatar.com/${payload.first_name.toLowerCase()}.png`,
+        });
         set({ user });
     },
 }));

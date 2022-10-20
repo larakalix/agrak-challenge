@@ -19,6 +19,7 @@
         "paths": {
             "@components/*": ["components/*"],
             "@interfaces/*": ["interfaces/*"],
+            "@validationSchemas/*": ["validationSchemas/*"],
             "@enums/*": ["enums/*"],
             "@routes/*": ["routes/*"],
             "@views/*": ["views/*"],
