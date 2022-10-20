@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { HomeView } from "../components/views/home/HomeView";
-import { UserView } from "../components/views/user/UserView";
+import { HomeView, UserView } from "@views/index";
 
 export const RoutesNav = () => {
     return (
@@ -13,9 +12,6 @@ export const RoutesNav = () => {
                         <ul className="flex items-center space-x-3">
                             <li>
                                 <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/user">User</Link>
                             </li>
                             <li className="bg-blue-500 text-white rounded-sm px-4 py-2 shadow-sm">
                                 <Link to="/user">Create user</Link>

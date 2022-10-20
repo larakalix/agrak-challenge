@@ -1,20 +1,36 @@
 import axios from "axios";
 import create from "zustand";
-import { User } from "../../interfaces/data/user";
-import { UserStore } from "../../interfaces/store/UserStore";
+import { UserStore } from "@interfaces/store/UserStore";
 
 const api_uri = "https://635017b9df22c2af7b630c3e.mockapi.io/api/v1/users";
 
-export const useUserStore = create<UserStore>((set) => ({
+const useUserStore = create<UserStore>((set) => ({
     users: [],
     user: null,
+    loading: false,
     fetch: async () => {
         const { data: users } = await axios.get(api_uri);
         set({ users });
     },
+    setLoading: () => set((state) => ({ loading: !state.loading })),
+    setUser: async (user) => set({ user }),
     getUser: async (id) => {
         const { data: user } = await axios.get(`${api_uri}/${id}`);
         set({ user });
     },
-    cleanUser: () => set({ user: null }),
+    createUser: async (payload) => {
+        const { data: user } = await axios.post(api_uri, {
+            ...payload,
+            avatar: `https://api.multiavatar.com/${payload.first_name}.png`,
+        });
+
+        set({ user });
+        return user;
+    },
+    updateUser: async (id, payload) => {
+        const { data: user } = await axios.put(`${api_uri}/${id}`, payload);
+        set({ user });
+    },
 }));
+
+export default useUserStore;

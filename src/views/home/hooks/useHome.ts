@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
-import { useUserStore } from "../../../../zustand/users/userStore";
+import useUserStore from "@zustand/users/userStore";
 
 export const useHome = () => {
     const { users, fetch } = useUserStore((state) => state);

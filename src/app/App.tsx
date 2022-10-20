@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 import { changeMessage, selectMessage } from "../redux/slices/basicSlice";
-import { RoutesNav } from "../routes/Routes";
+import { RoutesNav } from "@routes/Routes";
 
 import "./App.css";
 

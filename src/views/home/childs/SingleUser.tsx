@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FiEdit, FiTrash } from "react-icons/fi";
-import { User } from "../../../../interfaces/data/user";
-import { Avatar } from "../../../generic/user/Avatar";
+import { Avatar } from "@components/generic/user/Avatar";
+import { User } from "@interfaces/data/user";
 
 interface Props {
     user: User;

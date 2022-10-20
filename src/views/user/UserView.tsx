@@ -1,12 +1,10 @@
 import { useParams } from "react-router-dom";
-import { ViewWrapper } from "../../wrapper/ViewWrapper";
-import { Avatar } from "../home/childs";
+import { ViewWrapper } from "@components/wrapper/ViewWrapper";
 import { useDetail } from "./hooks/useDetail";
-
-enum ActionType {
-    New,
-    Edit,
-}
+import { Avatar } from "@components/generic/user/Avatar";
+import { UserForm } from "./childs";
+import { ActionType } from "@enums/enums";
+import { Message } from "@components/generic/Message";
 
 export const UserView = () => {
     const { id } = useParams();
@@ -18,13 +16,13 @@ export const UserView = () => {
         [ActionType.New]: "Create user",
     }[type];
 
-    if (!user) return null;
+    if (!user) return <Message message="Retreiving data" />;
 
     return (
         <ViewWrapper>
             <h1 className="mb-8 uppercase">{title}</h1>
 
-            <div className="shadow-sm rounded-sm p-10 bg-white">
+            <div className="shadow-sm rounded-sm p-10 bg-white w-full max-w-md flex items-center flex-col">
                 <Avatar
                     id={user.id}
                     alt={user.first_name}
@@ -32,13 +30,7 @@ export const UserView = () => {
                     avoidRedirect
                 />
 
-                <h1 className="text-center text-[0.9rem]">{user.first_name}</h1>
-                <h2 className="text-center text-[0.8rem]">
-                    {user.second_name}
-                </h2>
-                <span className="block text-center text-[0.8rem] text-gray-800">
-                    {user.email}
-                </span>
+                <UserForm user={user} type={type} />
             </div>
         </ViewWrapper>
     );

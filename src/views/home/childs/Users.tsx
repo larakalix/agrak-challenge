@@ -1,5 +1,5 @@
-import { User } from "../../../../interfaces/data/user";
-import { EmptyData } from "../../../generic/EmptyData";
+import { User } from "@interfaces/data/user";
+import { Message } from "@components/generic/Message";
 import { SingleUser } from "./SingleUser";
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
 }
 
 export const Users = ({ users }: Props) => {
-    if (users.length === 0) return <EmptyData />;
+    if (users.length === 0) return <Message message="No data found" />;
 
     return (
         <>
