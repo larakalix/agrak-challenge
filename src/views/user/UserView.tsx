@@ -19,7 +19,7 @@ export const UserView = () => {
     if (!user) return <Message message="Retreiving data" />;
 
     return (
-        <ViewWrapper>
+        <ViewWrapper showActions>
             <h1 className="mb-8 uppercase">{title}</h1>
 
             <div className="shadow-sm rounded-sm p-10 bg-white w-full max-w-md flex items-center flex-col">
