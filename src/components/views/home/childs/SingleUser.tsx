@@ -10,11 +10,7 @@ interface Props {
 export const SingleUser = ({ user }: Props) => {
     return (
         <div className="shadow-sm rounded-sm py-8 px-4 w-full bg-white">
-            <Avatar
-                id={user.id}
-                alt={user.first_name}
-                thumbnail={user.avatar}
-            />
+            <Avatar id={user.id} alt={user.first_name} avatar={user.avatar} />
 
             <Link to={`/user/${user.id}`}>
                 <h1 className="text-center text-[0.9rem]">{user.first_name}</h1>

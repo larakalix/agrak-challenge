@@ -22,13 +22,14 @@ export const UserView = () => {
 
     return (
         <ViewWrapper>
-            <h1>{title}</h1>
+            <h1 className="mb-8 uppercase">{title}</h1>
 
             <div className="shadow-sm rounded-sm p-10 bg-white">
                 <Avatar
                     id={user.id}
                     alt={user.first_name}
-                    thumbnail={user.avatar}
+                    avatar={user.avatar}
+                    avoidRedirect
                 />
 
                 <h1 className="text-center text-[0.9rem]">{user.first_name}</h1>

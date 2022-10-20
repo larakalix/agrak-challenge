@@ -5,7 +5,8 @@ export interface User {
     first_name: string;
     second_name: string;
     email: string;
-    avatar: Thumbnail;
+    avatar: string;
+    createdAt: string;
 }
 
 export interface Thumbnail extends GenericImage {

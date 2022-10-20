@@ -1,16 +1,19 @@
+import axios from "axios";
 import create from "zustand";
-import { MOCK_USERS } from "../../data/data";
+import { User } from "../../interfaces/data/user";
 import { UserStore } from "../../interfaces/store/UserStore";
+
+const api_uri = "https://635017b9df22c2af7b630c3e.mockapi.io/api/v1/users";
 
 export const useUserStore = create<UserStore>((set) => ({
     users: [],
     user: null,
     fetch: async () => {
-        const users = MOCK_USERS;
+        const { data: users } = await axios.get(api_uri);
         set({ users });
     },
     getUser: async (id) => {
-        const user = MOCK_USERS.filter((user) => user.id === id)[0];
+        const { data: user } = await axios.get(`${api_uri}/${id}`);
         set({ user });
     },
     cleanUser: () => set({ user: null }),
