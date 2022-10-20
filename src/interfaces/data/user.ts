@@ -1,7 +1,7 @@
 import { GenericImage } from "./image";
 
 export interface User {
-    id: string | number;
+    id: string;
     first_name: string;
     second_name: string;
     email: string;

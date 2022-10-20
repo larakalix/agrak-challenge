@@ -11,7 +11,7 @@ export const Users = ({ users }: Props) => {
 
     return (
         <>
-            <h1 className="mt-4 uppercase font-bold tracking-wider text-[1.4rem]">
+            <h1 className="mt-4 uppercase font-bold tracking-wider text-[1.4rem] mb-6">
                 User list
             </h1>
 

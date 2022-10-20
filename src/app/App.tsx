@@ -9,7 +9,7 @@ function App() {
     const dispatch = useAppDispatch();
 
     return (
-        <main>
+        <main className="bg-gray-50">
             <RoutesNav />
 
             {/* <div>

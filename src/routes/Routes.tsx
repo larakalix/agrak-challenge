@@ -6,9 +6,9 @@ export const RoutesNav = () => {
     return (
         <Router>
             <>
-                <nav className="shadow-sm w-full">
-                    <div className="flex items-center justify-between px-6 py-4 max-w-screen-lg m-auto">
-                        <div>Agrak Challenge</div>
+                <nav className="shadow-sm w-full bg-white">
+                    <div className="flex items-center justify-between py-4 max-w-screen-lg m-auto">
+                        <Link to="/">Agrak Challenge</Link>
 
                         <ul className="flex items-center space-x-3">
                             <li>
@@ -25,6 +25,7 @@ export const RoutesNav = () => {
                 </nav>
 
                 <Routes>
+                    <Route path="/user/:id" element={<UserView />} />
                     <Route path="/user" element={<UserView />} />
                     <Route path="/" element={<HomeView />} />
                 </Routes>

@@ -2,7 +2,7 @@ import { User } from "../interfaces/data/user";
 
 export const MOCK_USERS: User[] = [
     {
-        id: 1,
+        id: "fe2d74a4-5e27-4578-8025-b9f9a923d110",
         first_name: "Leanne Graham",
         second_name: "Bret",
         email: "Sincere@april.biz",
@@ -11,7 +11,7 @@ export const MOCK_USERS: User[] = [
         },
     },
     {
-        id: 2,
+        id: "04ae5738-be1f-4c35-8963-04c67df62968",
         first_name: "Ervin Howell",
         second_name: "Antonette",
         email: "Shanna@melissa.tv",
@@ -20,7 +20,7 @@ export const MOCK_USERS: User[] = [
         },
     },
     {
-        id: 3,
+        id: "2c361ee3-e579-402e-865d-230941ccaf8f",
         first_name: "Clementine Bauch",
         second_name: "Samantha",
         email: "Nathan@yesenia.net",
@@ -29,7 +29,7 @@ export const MOCK_USERS: User[] = [
         },
     },
     {
-        id: 4,
+        id: "42a3c094-49de-4a05-9e1d-063f9709a56f",
         first_name: "Patricia Lebsack",
         second_name: "Karianne",
         email: "Julianne.OConner@kory.org",
@@ -38,7 +38,7 @@ export const MOCK_USERS: User[] = [
         },
     },
     {
-        id: 5,
+        id: "f2b22502-f0fe-475a-a3e6-11eedc16cf3c",
         first_name: "Chelsey Dietrich",
         second_name: "Kamren",
         email: "Lucio_Hettinger@annie.ca",
@@ -47,7 +47,7 @@ export const MOCK_USERS: User[] = [
         },
     },
     {
-        id: 6,
+        id: "58c62d88-42c8-4896-b025-9c650fccf0d7",
         first_name: "Mrs. Dennis Schulist",
         second_name: "Leopoldo_Corkery",
         email: "Karley_Dach@jasper.info",
@@ -56,7 +56,7 @@ export const MOCK_USERS: User[] = [
         },
     },
     {
-        id: 7,
+        id: "37f33880-8a61-4a71-9c93-30514eb7446d",
         first_name: "Kurtis Weissnat",
         second_name: "Elwyn.Skiles",
         email: "Telly.Hoeger@billy.biz",
@@ -65,7 +65,7 @@ export const MOCK_USERS: User[] = [
         },
     },
     {
-        id: 8,
+        id: "1d92627a-0d2d-4d9f-b612-64f2db6e843c",
         first_name: "Nicholas Runolfsdottir V",
         second_name: "Maxime_Nienow",
         email: "Sherwood@rosamond.me",
@@ -74,7 +74,7 @@ export const MOCK_USERS: User[] = [
         },
     },
     {
-        id: 9,
+        id: "4e70540d-96c2-4cbe-b183-866f8dfed67e",
         first_name: "Glenna Reichert",
         second_name: "Delphine",
         email: "Chaim_McDermott@dana.io",
@@ -83,7 +83,7 @@ export const MOCK_USERS: User[] = [
         },
     },
     {
-        id: 10,
+        id: "c948ba52-d520-40e3-8622-13dad82a344e",
         first_name: "Clementina DuBuque",
         second_name: "Moriah.Stanton",
         email: "Rey.Padberg@karina.biz",
