@@ -6,7 +6,7 @@ export const RoutesNav = () => {
         <Router>
             <>
                 <nav className="shadow-sm w-full bg-white">
-                    <div className="flex items-center justify-between py-4 max-w-screen-lg m-auto">
+                    <div className="flex flex-col md:flex-row space-y-5 md:space-y-0 items-center justify-between py-4 max-w-screen-lg m-auto">
                         <Link to="/">Agrak Challenge</Link>
 
                         <ul className="flex items-center space-x-3">
