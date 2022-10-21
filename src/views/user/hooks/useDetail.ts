@@ -18,8 +18,7 @@ export const useDetail = (id: string | undefined) => {
     useEffect(() => {
         const getDetail = async () => await getUser(id!);
         if (id) getDetail();
-        else
-            setUser(INITIAL_VALUES);
+        else setUser(INITIAL_VALUES);
 
         return () => {
             setUser(null);

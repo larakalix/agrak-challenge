@@ -11,43 +11,43 @@ You will need to build the following views with React
 
 Which must contain:
 
-- A list of users showing their first_name, second_name, email, avatar [x]
-- A button to add a new user (this button should redirect to the user creation view) [x]
-- A button to edit an existing user (this button should redirect to the user edition view) [ ]
-- A button to delete an existing user (this button should delete the user and refresh the list) [ ]
+-   A list of users showing their first_name, second_name, email, avatar [ ]
+-   A button to add a new user (this button should redirect to the user creation view) [ ]
+-   A button to edit an existing user (this button should redirect to the user edition view) [ ]
+-   A button to delete an existing user (this button should delete the user and refresh the list) [ ]
 
 #### Create User View/Update User View
 
 Which must contain:
 
-- A form to create a new user or update an existing user [ ]
-- A button to save the user (this button should save the user and redirect to the home view) [ ]
-- A button to cancel the action (this button should redirect to the home view) [ ]
-- A button to delete the user (only in the update view) (this button should delete the user and redirect to the home
-  view) [ ]
-- A button to go back to the home view
-- The form must have the following fields: [ ]
-    - first_name
-    - second_name
-    - email
-    - avatar
+-   A form to create a new user or update an existing user [ ]
+-   A button to save the user (this button should save the user and redirect to the home view) [ ]
+-   A button to cancel the action (this button should redirect to the home view) [ ]
+-   A button to delete the user (only in the update view) (this button should delete the user and redirect to the home
+    view) [ ]
+-   A button to go back to the home view
+-   The form must have the following fields: [ ]
+    -   first_name
+    -   second_name
+    -   email
+    -   avatar
 
 ## Technical details
 
 We will not evaluate the design of the application, but we will evaluate the code quality, so we suggest to follow
 software engineering best practices that demonstrate that you are able to develop high-quality software.
 
-- You *must* use Typescript [x]
-- You can use any CSS framework you want [x]
-- You can use any state management library you want (Redux, MobX, Zustand, React Query etc.) [x]
-- You can use any routing library you want [x]
-- You can use any HTTP client library you want [x]
+-   You _must_ use Typescript [ ]
+-   You can use any CSS framework you want [ ]
+-   You can use any state management library you want (Redux, MobX, Zustand, React Query etc.) [ ]
+-   You can use any routing library you want [ ]
+-   You can use any HTTP client library you want [ ]
 
 #### Functional requirements
 
-- You will have to configure routes to navigate between the views and to be able to access them directly by the URL.
-- You will have to use the provided API to fetch the users and to create/update/delete them.
-- Any updates to the users must be reflected in the home view.
+-   You will have to configure routes to navigate between the views and to be able to access them directly by the URL.
+-   You will have to use the provided API to fetch the users and to create/update/delete them.
+-   Any updates to the users must be reflected in the home view.
 
 ## Api
 

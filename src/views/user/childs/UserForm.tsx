@@ -22,7 +22,7 @@ const INITIAL_VALUES: User = {
 };
 
 export const UserForm = ({ user, type }: Props) => {
-    let navigate = useNavigate();
+    const navigate = useNavigate();
     const { createUser, updateUser } = useUserStore((state) => state);
 
     const buttonLabel = {
@@ -38,7 +38,7 @@ export const UserForm = ({ user, type }: Props) => {
     const redirect = () => {
         setTimeout(() => {
             navigate("/");
-        }, 2000);
+        }, 1000);
     };
 
     return (
