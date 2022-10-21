@@ -2,12 +2,21 @@ import { Link } from "react-router-dom";
 import { FiEdit, FiTrash } from "react-icons/fi";
 import { Avatar } from "@components/generic/user/Avatar";
 import { User } from "@interfaces/data/user";
+import useUserStore from "@zustand/users/userStore";
 
 interface Props {
     user: User;
 }
 
 export const SingleUser = ({ user }: Props) => {
+    const { fetch, deleteUser } = useUserStore((state) => state);
+
+    const handleDelete = async () => {
+        const response = await deleteUser(user.id);
+
+        if (response) fetch();
+    };
+
     return (
         <div className="shadow-sm rounded-sm py-8 px-4 w-full bg-white">
             <Avatar id={user.id} alt={user.first_name} avatar={user.avatar} />
@@ -31,14 +40,14 @@ export const SingleUser = ({ user }: Props) => {
                             </div>
                         </Link>
                     </li>
-                    {/* <li>
+                    <li>
                         <button
                             className="bg-red-400 p-2 text-white flex items-center justify-center rounded-sm shadow-sm"
-                            onClick={() => navigate(`/user`)}
+                            onClick={handleDelete}
                         >
                             <FiTrash />
                         </button>
-                    </li> */}
+                    </li>
                 </ul>
             </footer>
         </div>

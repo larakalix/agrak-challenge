@@ -36,6 +36,10 @@ const useUserStore = create<UserStore>((set) => ({
         });
         set({ user });
     },
+    deleteUser: async (id) => {
+        const { data: user } = await axios.delete(`${api_uri}/${id}`);
+        return !!user;
+    },
 }));
 
 export default useUserStore;

@@ -10,4 +10,5 @@ export interface UserStore {
     getUser: (id: string) => void;
     createUser: (payload: User) => Promise<User>;
     updateUser: (id: string, payload: User) => void;
+    deleteUser: (id: string) => Promise<boolean>;
 }
