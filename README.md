@@ -11,22 +11,21 @@ You will need to build the following views with React
 
 Which must contain:
 
--   A list of users showing their first_name, second_name, email, avatar [ ]
--   A button to add a new user (this button should redirect to the user creation view) [ ]
--   A button to edit an existing user (this button should redirect to the user edition view) [ ]
--   A button to delete an existing user (this button should delete the user and refresh the list) [ ]
+-   A list of users showing their first_name, second_name, email, avatar [X]
+-   A button to add a new user (this button should redirect to the user creation view) [X]
+-   A button to edit an existing user (this button should redirect to the user edition view) [X]
+-   A button to delete an existing user (this button should delete the user and refresh the list) [X]
 
 #### Create User View/Update User View
 
 Which must contain:
 
--   A form to create a new user or update an existing user [ ]
--   A button to save the user (this button should save the user and redirect to the home view) [ ]
--   A button to cancel the action (this button should redirect to the home view) [ ]
--   A button to delete the user (only in the update view) (this button should delete the user and redirect to the home
-    view) [ ]
--   A button to go back to the home view
--   The form must have the following fields: [ ]
+-   A form to create a new user or update an existing user [X]
+-   A button to save the user (this button should save the user and redirect to the home view) [X]
+-   A button to cancel the action (this button should redirect to the home view) [X]
+-   A button to delete the user (only in the update view) (this button should delete the user and redirect to the home view) [X]
+-   A button to go back to the home view [X]
+-   The form must have the following fields: [X]
     -   first_name
     -   second_name
     -   email
@@ -37,11 +36,11 @@ Which must contain:
 We will not evaluate the design of the application, but we will evaluate the code quality, so we suggest to follow
 software engineering best practices that demonstrate that you are able to develop high-quality software.
 
--   You _must_ use Typescript [ ]
--   You can use any CSS framework you want [ ]
--   You can use any state management library you want (Redux, MobX, Zustand, React Query etc.) [ ]
--   You can use any routing library you want [ ]
--   You can use any HTTP client library you want [ ]
+-   You _must_ use Typescript [X]
+-   You can use any CSS framework you want [X]
+-   You can use any state management library you want (Redux, MobX, Zustand, React Query etc.) [X]
+-   You can use any routing library you want [X]
+-   You can use any HTTP client library you want [X]
 
 #### Functional requirements
 
