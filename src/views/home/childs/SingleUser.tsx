@@ -1,13 +1,9 @@
 import { Link } from "react-router-dom";
 import { FiEdit } from "react-icons/fi";
 import { Avatar } from "@components/generic/user/Avatar";
-import { User } from "@interfaces/data/user";
+import { SingleUserProps } from "@interfaces/components/User";
 
-interface Props {
-    user: User;
-}
-
-export const SingleUser = ({ user }: Props) => {
+export const SingleUser = ({ user }: SingleUserProps) => {
     return (
         <div className="shadow-sm rounded-sm py-8 px-4 w-full bg-white">
             <Avatar id={user.id} alt={user.first_name} avatar={user.avatar} />

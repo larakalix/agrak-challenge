@@ -32,11 +32,11 @@ export const UserView = () => {
         <ViewWrapper showActions>
             <h1 className="mb-8 uppercase">{title}</h1>
 
-            <div className="shadow-sm rounded-sm p-10 bg-white w-full max-w-md flex items-center flex-col">
+            <div className="shadow-sm rounded-sm p-10 bg-white w-full max-w-md flex items-center flex-col relative">
                 {type === ActionType.Edit && (
-                    <div>
+                    <div className="absolute top-4 right-4">
                         <button
-                            className="bg-red-400 p-2 text-white flex items-center justify-center rounded-sm shadow-sm"
+                            className="bg-red-600 p-2 text-white flex items-center justify-center rounded-sm shadow-sm"
                             onClick={() => handleDelete(id!)}
                         >
                             <FiTrash />

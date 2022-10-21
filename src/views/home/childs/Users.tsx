@@ -1,12 +1,8 @@
-import { User } from "@interfaces/data/user";
 import { Message } from "@components/generic/Message";
 import { SingleUser } from "./SingleUser";
+import { UsersProps } from "@interfaces/components/User";
 
-interface Props {
-    users: User[];
-}
-
-export const Users = ({ users }: Props) => {
+export const Users = ({ users }: UsersProps) => {
     if (users.length === 0) return <Message message="No data found" />;
 
     return (

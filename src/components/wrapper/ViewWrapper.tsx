@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
+import { ViewWrapperProps } from "@interfaces/components/ViewWrapper";
 
-interface Props {
-    showActions?: boolean;
-    children: JSX.Element | JSX.Element[];
-}
-
-export const ViewWrapper = ({ showActions = false, children }: Props) => {
+export const ViewWrapper = ({
+    showActions = false,
+    children,
+}: ViewWrapperProps) => {
     return (
         <div className="flex justify-start items-center flex-col min-h-screen max-w-screen-lg m-auto mt-8">
             {showActions && (
